@@ -1,0 +1,17 @@
+html
+  head
+  style
+    include ./style.css
+    title= 'Url Shortener'
+  body
+    div.center
+      form(action='/' method='post')
+        input(type='text' name='url' id='url' placeholder='URL to shorten')
+        button(type='submit') Shorten
+    //- div.center
+    //-   p= error
+    div.center
+      p=reqUrl
+      if reqUrl 
+        a.button(href=reqUrl target='_blank') Visit
+    //-   a.button(href=`http://www.google.com`, target='_blank')
