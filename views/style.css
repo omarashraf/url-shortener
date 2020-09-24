@@ -1,5 +1,56 @@
 .center {
     text-align: center;
+}
+
+.main-container {
     font-size: 2em;
     width: 100%;
+    position: relative;
+    height: 50vh;
+}
+
+.sub-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.url-input {
+    font-size: 1.1em;
+    padding: 15px;
+}
+
+.url-btn {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.url-btn:hover, .visit-btn:hover {
+    background-color: #333;
+}
+
+.visit-text {
+    font-size: 2em;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.visit-btn {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    background-color: pink;
+    padding: 20px;
+    font-size: 2em;
 }

@@ -35,7 +35,7 @@ app.get('/:url', async function (req, res) {
     if (url.length > 0) {
         res.redirect(url[0].url);
     } else {
-        res.status(404).json({ msg: 'no matching url' });
+        res.render('main', { error: 'not found' });
     }
 });
 
@@ -52,8 +52,7 @@ app.post('/', async function(req, res) {
         if (result) {
             res.render('main', { reqUrl: `${req.protocol}://${req.get('host')}${req.originalUrl}${shortUrlId}` });
         } else {
-            // TODO: certain template
-            res.status(500).json({ msg: 'internal server error' });
+            res.render('main', { error: 'something wrong occured, please try again' });
         }
     } else {
         res.render('main', { reqUrl: `${req.protocol}://${req.get('host')}${req.originalUrl}${url[0].shortUrlId}` });
